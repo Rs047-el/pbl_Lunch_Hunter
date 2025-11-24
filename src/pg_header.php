@@ -16,24 +16,24 @@ if (isset($_SESSION['usertype_id'])){
   if ($_SESSION['usertype_id']==='1'){  //社員
     $menu = array(   //社員メニュー
       '店舗一覧'  => 'rst_list',
-      'MY_PAGE'  => 'ust_page',
+      'MY_PAGE'  => 'user_page',
       '店舗登録'  => 'rst_input',
     );
   }
   if ($_SESSION['usertype_id']==='9'){  //管理者
     $menu = array(   //管理者メニュー
       '店舗一覧'  => 'rst_list',
-      'ユーザ一覧'  => 'usr_list',
+      'ユーザ一覧'  => 'user_list',
       '通報済み口コミ一覧' => 'rev_report',
     );
   } 
   foreach($menu as $label=>$action){ 
     echo  '<a href="?do=' . $action . '">' . $label . '</a>&nbsp;&nbsp;' ;
   }
-  echo  '<a href="?do=usr_logout">ログアウト</a>&nbsp;&nbsp;' ;
+  echo  '<a href="?do=user_logout">ログアウト</a>&nbsp;&nbsp;' ;
   
 }else{
-   echo  '<a href="?do=usr_login">ログイン</a>' ;
+   echo  '<a href="?do=user_login">ログイン</a>' ;
 }
 ?>
 </div>
