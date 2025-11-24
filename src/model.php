@@ -8,7 +8,6 @@ class Model
     ];
 
     protected static $codes = [
-        'user_type'=>['1'=>'社員','9'=>'管理者'],
-        
-    ]
+        'user_type'=>['1'=>'社員','9'=>'管理者']
+    ];
 }
